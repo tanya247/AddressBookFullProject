@@ -8,6 +8,19 @@ public class AddressBook {
     private long phoneNo;
     private String email;
 
+    public AddressBook(String firstName ,String lastName ,String address, String city,
+                       String state,long phoneNo,String email,int zip) {
+        super();
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.phoneNo = phoneNo;
+        this.email = email;
+        this.zip = zip;
+    }
+
     public String getFirstName() {
         return firstName;
     }

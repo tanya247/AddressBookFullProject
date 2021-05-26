@@ -31,4 +31,16 @@ class AddressServiceTest {
         int count = addressBookCsvReader.readData();
         Assertions.assertEquals(3,count);
     }
+    @Test
+    public void Json_Test() throws IOException {
+        AddressBook[] arrayOfEmps = {
+                new AddressBook("Tanya", "Kansal", "Chandi Mandir", "Hapur", "UP", "9874568547" , "xyz@gmail.com", 245101),
+                new AddressBook("Prashant", "Kumar", "Kannauj", "Kanpur", "UP", "98754788777" , "xyabxt@gmail.com", 245524)
+        };
+        AddJsonFile addJsonFile = new AddJsonFile();
+        addJsonFile.writeDataInJSONFile(Arrays.asList(arrayOfEmps));
+        addJsonFile.readDataFromJSONFile();
+        int m = addJsonFile.count();
+        Assertions.assertEquals(2,m);
+    }
 }

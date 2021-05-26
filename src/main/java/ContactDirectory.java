@@ -155,6 +155,32 @@ public class ContactDirectory{
             }
         }
     }
+    public void countPerson() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Count by City or State ");
+        System.out.println("Enter 1 for count by city");
+        System.out.println("Enter 2 for count by State");
+        ArrayList<AddressBook> contacts = this.getContact();
+        int m = sc.nextInt();
+        if (contacts.isEmpty()) {
+            System.out.println("AddressBook is empty");
+        }
+        else {
+            if (m == 1) {
+                System.out.println("Enter the City name :");
+                String cityName = sc.next();
+                int countByCity = (int) contacts.stream()
+                        .filter(person -> person.getCity().equalsIgnoreCase(cityName)).count();
+                System.out.println(countByCity);
+            }else if(m == 2) {
+                System.out.println("Enter the State name :");
+                String stateName = sc.next();
+                int countByCity = (int) contacts.stream()
+                        .filter(person -> person.getState().equalsIgnoreCase(stateName)).count();
+                System.out.println(countByCity);
+            }
+        }
+    }
     public void show() {
         if (contacts.isEmpty()) {
             System.out.println("AddressBook is empty");

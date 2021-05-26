@@ -19,6 +19,8 @@ public class AddressBookMain {
         System.out.println("Enter 3 : Delete Contact");
         System.out.println("Enter 4 : Show Contact");
         System.out.println("Enter 5: Search Contact by city name or by state name ");
+        System.out.println("Enter 6: Count Contact by city name or by state name ");
+
         int choose = sc.nextInt();
         switch(choose) {
             case 1 :
@@ -37,6 +39,8 @@ public class AddressBookMain {
             case 5:
                 contactDirectory.searchContact();
                 break;
+            case 6:
+                contactDirectory.countPerson();
             default:
                 System.out.println("Invalid Choice");
                 break;

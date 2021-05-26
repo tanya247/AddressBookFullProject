@@ -53,4 +53,13 @@ class AddressServiceTest {
         addressBookList = addressBookService.readAddressBookData();
         Assertions.assertEquals(13, addressBookList.size());
     }
+    @Test
+    public void givenNewAddress_WhenUpdated_ShouldSyncWithDatabase() throws AddressBookException {
+        AddressBookService addressBookService = new AddressBookService();
+        List<AddressBook>addressBooks = addressBookService.readAddressBookData();
+        addressBookService.updateAddress("Sandip","Ghaziabad");
+        System.out.println(addressBooks);
+        boolean result = addressBookService.checkEmployeePayrollInSyncWithDB("Sandip");
+        Assertions.assertTrue(result);
+    }
 }

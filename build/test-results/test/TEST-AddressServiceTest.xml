@@ -1,36 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AddressServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-05-26T15:23:30" hostname="LAPTOP-Q9T3UUC8" time="1.992">
+<testsuite name="AddressServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-26T15:40:14" hostname="LAPTOP-Q9T3UUC8" time="2.889">
   <properties/>
-  <testcase name="givenContactDetailsWhenWrittenToFile()" classname="AddressServiceTest" time="0.118"/>
-  <testcase name="givenAddressBook_WhenRetrived_ShouldReturnAddressBookSize()" classname="AddressServiceTest" time="0.725"/>
-  <testcase name="CSV_Test()" classname="AddressServiceTest" time="0.766"/>
-  <testcase name="Json_Test()" classname="AddressServiceTest" time="0.378"/>
-  <system-out><![CDATA[AddressBook{firstName='Tanya', lastName='Kansal', address='Chandi Mandir', city='Hapur', state='UP', zip=245101, phoneNo=9874568547, email='xyz@gmail.com'}
-1
-address
-city
-email
-firstName
-lastName
-phoneNo
-state
-zip
-Chandi Mandir
-Hapur
-xyz@gmail.com
-Tanya
-Kansal
-9874568547
-UP
-245101
-Kannauj
-Kanpur
-xyabxt@gmail.com
-Prashant
-Kumar
-98754788777
-UP
-245524
+  <testcase name="givenNewAddress_WhenUpdated_ShouldSyncWithDatabase()" classname="AddressServiceTest" time="2.889"/>
+  <system-out><![CDATA[[AddressBook{firstName='Tanya', lastName='Kansal', address='chandi mandir', city='Hapur', state='UP', zip=0, phoneNo=7458964411, email='abc@gmail.com'}, AddressBook{firstName='Ankur', lastName='Singh', address='karolbagh', city='Delhi', state='Delhi', zip=0, phoneNo=8745219653, email='anksingh@gmail.com'}, AddressBook{firstName='Paras', lastName='Singhal', address='abcd', city='Hapur', state='UP', zip=0, phoneNo=785625444, email='Paras@gmail.com'}, AddressBook{firstName='Paras', lastName='Singhal', address='abcd', city='Hapur', state='UP', zip=0, phoneNo=785625444, email='Parass@gmail.com'}, AddressBook{firstName='Poonam', lastName='Patel', address='abcvsfgdsdsh', city='Varansi', state='UP', zip=0, phoneNo=7485967895, email='poonamPatel@gmail.com'}, AddressBook{firstName='Prashant', lastName='Kumar', address='chibramau', city='kannuj', state='UP', zip=0, phoneNo=8547961235, email='prashantkumar@gmail.com'}, AddressBook{firstName='Palak', lastName='Singhal', address='abc', city='Hapur', state='UP', zip=0, phoneNo=789456244, email='Ps@gmail.com'}, AddressBook{firstName='Palak', lastName='Singhal', address='abc', city='Hapur', state='UP', zip=0, phoneNo=789456244, email='Pss@gmail.com'}, AddressBook{firstName='Sandip', lastName='Chauhan', address='Kanpur', city='Ghaziabad', state='UP', zip=0, phoneNo=8745967842, email='s876895@gmail.com'}, AddressBook{firstName='Shruti', lastName='Verma', address='kanpur', city='Kanpur', state='UP', zip=0, phoneNo=8547963275, email='shrutiverma2105@gmail.com'}, AddressBook{firstName='Tanvi', lastName='Sharma', address='ABES Ghaziabad', city='Ghaziabad', state='UP', zip=0, phoneNo=7469823514, email='tanvisharma854@gmail.com'}, AddressBook{firstName='Tanya', lastName='Kansal', address='chandi mandir', city='Hapur', state='UP', zip=0, phoneNo=7458964411, email='tanya@gmail.com'}, AddressBook{firstName='Tanya', lastName='Kansal', address='chandi mandir', city='Hapur', state='UP', zip=0, phoneNo=7458964411, email='tanyak@gmail.com'}]
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -82,6 +82,24 @@ public class ContactDirectory{
             }
         }
     }
+    public void deleteContact() {
+        if (contacts.isEmpty()) {
+            System.out.println("AddressBook is empty");
+        } else {
+            System.out.println("Enter First Name");
+            String Name = scanner.next();
+            for (int i = 0; i < contacts.size(); i++) {
+                m = contacts.get(i).getFirstName();
+                if (m.equalsIgnoreCase(Name)) {
+                    contacts.remove(i);
+                    System.out.println("contact deleted");
+                } else {
+                    System.out.println("Name not found");
+                }
+
+            }
+        }
+    }
     public void show() {
         if (contacts.isEmpty()) {
             System.out.println("AddressBook is empty");

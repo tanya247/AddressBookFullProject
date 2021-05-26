@@ -16,7 +16,8 @@ public class AddressBookMain {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter 1 : Add contact");
         System.out.println("Enter 2 : edit contact ");
-        System.out.println("Enter 3 : Show Contact");
+        System.out.println("Enter 3 : Delete Contact");
+        System.out.println("Enter 4 : Show Contact");
         int choose = sc.nextInt();
         switch(choose) {
             case 1 :
@@ -26,8 +27,10 @@ public class AddressBookMain {
             case 2:
                 contactDirectory.editContact();
                 break;
-
             case 3:
+                contactDirectory.deleteContact();
+                break;
+            case 4:
                 contactDirectory.show();
                 break;
 

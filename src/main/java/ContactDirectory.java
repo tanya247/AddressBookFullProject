@@ -181,13 +181,43 @@ public class ContactDirectory{
             }
         }
     }
-    public void sortNameAlphabetically() {
+    public void sortedEntries() {
+        System.out.println("Sorted enteries according to diiferent attributes:-  ");
+        System.out.println("Enter 1 - Sorted By Person Name");
+        System.out.println("Enter 2 - Sorted By City Name");
+        System.out.println("Enter 3 - Sorted By State Name");
+        System.out.println("Enter 4 - Sorted By Zip Name");
+        Scanner sc = new Scanner(System.in);
+        int m = sc.nextInt();
         ArrayList<AddressBook> contacts = this.getContact();
-        List<AddressBook> sortedList = contacts.stream().sorted(Comparator.comparing(AddressBook::getName)).collect(Collectors.toList());
-
-        for(AddressBook contact:sortedList){
-            System.out.println("Name: "+contact.getName());
+        if(m==1) {
+            List<AddressBook> sortedList = contacts.stream().sorted(Comparator.comparing(AddressBook::getName)).collect(Collectors.toList());
+            for(AddressBook contact:sortedList){
+                System.out.println("Name: "+contact.getName());
+            }
         }
+        else if(m==2) {
+            List<AddressBook> sortedList = contacts.stream().sorted(Comparator.comparing(AddressBook::getCity)).collect(Collectors.toList());
+            for(AddressBook contact:sortedList){
+                System.out.println("City: "+contact.getCity());
+                System.out.println("Name: "+contact.getName());
+            }
+        }
+        else if(m==3) {
+            List<AddressBook> sortedList = contacts.stream().sorted(Comparator.comparing(AddressBook::getState)).collect(Collectors.toList());
+            for(AddressBook contact:sortedList){
+                System.out.println("State: "+contact.getState());
+                System.out.println("Name: "+contact.getName());
+            }
+        }
+        else if(m==4) {
+            List<AddressBook> sortedList = contacts.stream().sorted(Comparator.comparing(AddressBook::getZip)).collect(Collectors.toList());
+            for(AddressBook contact:sortedList){
+                System.out.println("Zip: "+contact.getZip());
+                System.out.println("Name: "+contact.getName());
+            }
+        }
+
     }
     public void show() {
         if (contacts.isEmpty()) {

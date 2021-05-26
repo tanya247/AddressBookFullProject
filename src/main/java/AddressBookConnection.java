@@ -55,8 +55,8 @@ public class AddressBookConnection {
                 String state = resultSet.getString("State");
                 String phoneNo = resultSet.getString("Mobile_No");
                 String email = resultSet.getString("Email");
-                LocalDate date = resultSet.getDate("startDate").toLocalDate();
-                addressBookList.add(new AddressBook(firstName, lastName, address, city, state, phoneNo, email, date));
+                //LocalDate date = resultSet.getDate("startDate").toLocalDate();
+                addressBookList.add(new AddressBook(firstName, lastName, address, city, state, phoneNo, email));
             }
         } catch (SQLException e) {
             e.printStackTrace();

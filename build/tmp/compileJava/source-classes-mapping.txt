@@ -7,15 +7,15 @@ MultipleAddressBook.java
 AddressBookException.java
  AddressBookException
  AddressBookException$AddressBookExceptionType
-AddressBookService.java
- AddressBookService
+AddressBookIOService.java
+ AddressBookIOService
 AddressBook.java
  AddressBook
 AddJsonFile.java
  AddJsonFile
-AddressBookConnection.java
- AddressBookConnection
 ContactDirectory.java
  ContactDirectory
-AddressBookIOService.java
- AddressBookIOService
+AddressBookService.java
+ AddressBookService
+AddressBookConnection.java
+ AddressBookConnection

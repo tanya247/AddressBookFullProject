@@ -5,8 +5,12 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.List;
 
 class AddressServiceTest {
+    AddressBookService addressBookService = new AddressBookService();
+    List<AddressBook> addressBookList;
+
     @Test
     public void givenContactDetailsWhenWrittenToFile() {
         AddressBook[] arrayOfEmps = {
@@ -42,5 +46,11 @@ class AddressServiceTest {
         addJsonFile.readDataFromJSONFile();
         int m = addJsonFile.count();
         Assertions.assertEquals(2,m);
+    }
+
+    @Test
+    public void givenAddressBook_WhenRetrived_ShouldReturnAddressBookSize() throws AddressBookException {
+        addressBookList = addressBookService.readAddressBookData();
+        Assertions.assertEquals(13, addressBookList.size());
     }
 }

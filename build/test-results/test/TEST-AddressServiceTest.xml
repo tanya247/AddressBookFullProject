@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AddressServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-26T14:09:07" hostname="LAPTOP-Q9T3UUC8" time="0.342">
+<testsuite name="AddressServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-05-26T15:23:30" hostname="LAPTOP-Q9T3UUC8" time="1.992">
   <properties/>
-  <testcase name="Json_Test()" classname="AddressServiceTest" time="0.342"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="givenContactDetailsWhenWrittenToFile()" classname="AddressServiceTest" time="0.118"/>
+  <testcase name="givenAddressBook_WhenRetrived_ShouldReturnAddressBookSize()" classname="AddressServiceTest" time="0.725"/>
+  <testcase name="CSV_Test()" classname="AddressServiceTest" time="0.766"/>
+  <testcase name="Json_Test()" classname="AddressServiceTest" time="0.378"/>
+  <system-out><![CDATA[AddressBook{firstName='Tanya', lastName='Kansal', address='Chandi Mandir', city='Hapur', state='UP', zip=245101, phoneNo=9874568547, email='xyz@gmail.com'}
+1
+address
+city
+email
+firstName
+lastName
+phoneNo
+state
+zip
+Chandi Mandir
+Hapur
+xyz@gmail.com
+Tanya
+Kansal
+9874568547
+UP
+245101
+Kannauj
+Kanpur
+xyabxt@gmail.com
+Prashant
+Kumar
+98754788777
+UP
+245524
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,6 +1,4 @@
-import java.util.List;
-import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ContactDirectory{
@@ -129,18 +127,28 @@ public class ContactDirectory{
             if (m == 1) {
                 System.out.println("Enter the City name :");
                 String cityName = sc.next();
-                List<AddressBook> list  = contacts.stream().filter(p ->p.getCity().equals(cityName)).collect(Collectors.toList());
-                for(AddressBook addressbook: list){
-                    System.out.println("First Name: "+addressbook.getFirstName());
-                    System.out.println("Last Name: "+addressbook.getLastName());
+                Dictionary cityDictionary = new Hashtable();
+
+                contacts.stream().filter(map -> map.getCity().contains(cityName)).forEach(addressBook -> cityDictionary.put(addressBook.getName(),cityName));
+                System.out.println("City Name: " + cityName);
+
+                for (Enumeration p = cityDictionary.keys(); p.hasMoreElements();) {
+
+                    System.out.println("Name:" + p.nextElement());
+
                 }
             } else if(m == 2) {
                 System.out.println("Enter the State name :");
                 String stateName = sc.next();
-                List<AddressBook> list  = contacts.stream().filter(p ->p.getState().equals(stateName)).collect(Collectors.toList());
-                for(AddressBook addressbook: list){
-                    System.out.println("First Name: "+addressbook.getFirstName());
-                    System.out.println("Last Name: "+addressbook.getLastName());
+                Dictionary stateDictionary = new Hashtable();
+
+                contacts.stream().filter(map -> map.getState().contains(stateName)).forEach(addressBook -> stateDictionary.put(addressBook.getName(),stateName));
+                System.out.println("City Name: " + stateName);
+
+                for (Enumeration p = stateDictionary.keys(); p.hasMoreElements();) {
+
+                    System.out.println("Name:" + p.nextElement());
+
                 }
             }else {
                 System.out.println("Invalid choice");

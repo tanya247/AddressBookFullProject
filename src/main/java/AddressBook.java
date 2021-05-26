@@ -72,4 +72,7 @@ public class AddressBook {
         this.zip = zip;
     }
 
+    public Object getName() {
+        return firstName+" "+lastName;
+    }
 }

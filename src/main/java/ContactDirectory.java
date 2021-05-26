@@ -191,7 +191,7 @@ public class ContactDirectory{
         int m = sc.nextInt();
         ArrayList<AddressBook> contacts = this.getContact();
         if(m==1) {
-            List<AddressBook> sortedList = contacts.stream().sorted(Comparator.comparing(AddressBook::getName)).collect(Collectors.toList());
+            List<AddressBook> sortedList = contacts.stream().sorted(Comparator.comparing(AddressBook::getFirstName)).collect(Collectors.toList());
             for(AddressBook contact:sortedList){
                 System.out.println("Name: "+contact.getName());
             }

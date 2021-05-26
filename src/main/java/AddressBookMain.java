@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class AddressBookMain {
-    static ContactDirectory contactDirectory = new ContactDirectory();
-    public static void main(String args[]) {
+    ContactDirectory contactDirectory = new ContactDirectory();
+    public void addressBookMain(){
         Scanner sc = new Scanner(System.in);
         addressBookOperations();
         System.out.println("Do u wqant to proceed , say Yes/No");
@@ -12,7 +12,7 @@ public class AddressBookMain {
             ch = sc.next();
         }
     }
-    public static void addressBookOperations(){
+    public void addressBookOperations(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter 1 : Add contact");
         System.out.println("Enter 2 : edit contact ");

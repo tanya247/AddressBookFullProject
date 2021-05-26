@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AddressServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-05-26T15:57:26" hostname="LAPTOP-Q9T3UUC8" time="0.47">
+<testsuite name="AddressServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-05-26T16:08:35" hostname="LAPTOP-Q9T3UUC8" time="0.825">
   <properties/>
-  <testcase name="givenNameofCityOrState_WhenRetrieved_ShouldReturnProperData()" classname="AddressServiceTest" time="0.47">
+  <testcase name="givenNewContact_WhenAdded_ShouldSyncWithDB()" classname="AddressServiceTest" time="0.825">
     <failure message="AddressBookException" type="AddressBookException">AddressBookException
 	at AddressBookConnection.getAddressBookData(AddressBookConnection.java:63)
 	at AddressBookConnection.getDataFromDataBase(AddressBookConnection.java:38)
 	at AddressBookConnection.readData(AddressBookConnection.java:29)
-	at AddressBookConnection.getRecordsByCityOrState(AddressBookConnection.java:111)
-	at AddressBookService.getRecordsAddedByCityOrStateName(AddressBookService.java:44)
-	at AddressServiceTest.givenNameofCityOrState_WhenRetrieved_ShouldReturnProperData(AddressBookServiceTest.java:74)
+	at AddressBookService.readAddressBookData(AddressBookService.java:15)
+	at AddressBookService.addNewContact(AddressBookService.java:49)
+	at AddressServiceTest.givenNewContact_WhenAdded_ShouldSyncWithDB(AddressBookServiceTest.java:81)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -112,9 +112,9 @@
 	at AddressBookConnection.getAddressBookData(AddressBookConnection.java:58)
 	at AddressBookConnection.getDataFromDataBase(AddressBookConnection.java:38)
 	at AddressBookConnection.readData(AddressBookConnection.java:29)
-	at AddressBookConnection.getRecordsByCityOrState(AddressBookConnection.java:111)
-	at AddressBookService.getRecordsAddedByCityOrStateName(AddressBookService.java:44)
-	at AddressServiceTest.givenNameofCityOrState_WhenRetrieved_ShouldReturnProperData(AddressBookServiceTest.java:74)
+	at AddressBookService.readAddressBookData(AddressBookService.java:15)
+	at AddressBookService.addNewContact(AddressBookService.java:49)
+	at AddressServiceTest.givenNewContact_WhenAdded_ShouldSyncWithDB(AddressBookServiceTest.java:81)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

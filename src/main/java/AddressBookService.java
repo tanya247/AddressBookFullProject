@@ -31,7 +31,7 @@ public class AddressBookService {
                 .orElse(null);
     }
 
-    public boolean checkEmployeePayrollInSyncWithDB(String firstName) throws AddressBookException {
+    public boolean checkAddressBookInSyncWithDB(String firstName) throws AddressBookException {
         List<AddressBook> addressBooks = addressBookConnection.getRecordDataByName(firstName);
 
         return addressBooks.get(0).equals(getAddressBookData(firstName));
@@ -44,8 +44,11 @@ public class AddressBookService {
         List<AddressBook> addressBooks = addressBookConnection.getRecordsByCityOrState(city, state);
         return addressBooks;
     }
-
-
-
+    public void addNewContact(String firstName, String lastName,  String address, String city, String state,
+                              String phoneNo, String email) throws AddressBookException {
+        addressBookList = this.readAddressBookData();
+        addressBookList.add(addressBookConnection.addNewContact(firstName, lastName,  address, city, state,  phoneNo,
+                email));
+    }
 }
 

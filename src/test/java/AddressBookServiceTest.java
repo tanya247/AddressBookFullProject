@@ -59,7 +59,7 @@ class AddressServiceTest {
         List<AddressBook>addressBooks = addressBookService.readAddressBookData();
         addressBookService.updateAddress("Sandip","Ghaziabad");
         System.out.println(addressBooks);
-        boolean result = addressBookService.checkEmployeePayrollInSyncWithDB("Sandip");
+        boolean result = addressBookService.checkAddressBookInSyncWithDB("Sandip");
         Assertions.assertTrue(result);
     }
     @Test
@@ -74,5 +74,12 @@ class AddressServiceTest {
         List<AddressBook> addressBooks = addressBookService.getRecordsAddedByCityOrStateName("Ghaziabad","UP");
         System.out.println(addressBooks);
         Assertions.assertEquals(5,addressBooks.size());
+    }
+    @Test
+    public void givenNewContact_WhenAdded_ShouldSyncWithDB() throws AddressBookException {
+        AddressBookService addressBookService = new AddressBookService();
+        addressBookService.addNewContact("Radhika","Kansal","chandi mandir","Hapur","UP","7458964401","abz@gmail.com");
+        Assertions.assertTrue(addressBookService.checkAddressBookInSyncWithDB("Tanya"));
+
     }
 }

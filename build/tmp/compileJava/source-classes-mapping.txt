@@ -1,8 +1,12 @@
+AddressBookMain.java
+ AddressBookMain
+AddressBookCSVFile.java
+ AddressBookCSVFile
+MultipleAddressBook.java
+ MultipleAddressBook
 AddressBookException.java
  AddressBookException
  AddressBookException$AddressBookExceptionType
-AddressBookCSVFile.java
- AddressBookCSVFile
 AddressBookService.java
  AddressBookService
 AddressBook.java
@@ -15,7 +19,3 @@ ContactDirectory.java
  ContactDirectory
 AddressBookIOService.java
  AddressBookIOService
-MultipleAddressBook.java
- MultipleAddressBook
-AddressBookMain.java
- AddressBookMain

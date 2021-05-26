@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class AddressBook {
@@ -9,6 +10,7 @@ public class AddressBook {
     private int zip;
     private String phoneNo;
     private String email;
+    public LocalDate startDate;
 
     public AddressBook(String firstName , String lastName , String address, String city,
                        String state, String phoneNo, String email, int zip) {
@@ -23,7 +25,7 @@ public class AddressBook {
         this.zip = zip;
     }
 
-    public AddressBook(String firstName, String lastName, String address, String city, String state, String phoneNo, String email) {
+    public AddressBook(String firstName, String lastName, String address, String city, String state, String phoneNo, String email, LocalDate startDate) {
         super();
         this.firstName = firstName;
         this.lastName = lastName;
@@ -32,6 +34,7 @@ public class AddressBook {
         this.state = state;
         this.phoneNo = phoneNo;
         this.email = email;
+        this.startDate = startDate;
     }
 
     public String getFirstName() {

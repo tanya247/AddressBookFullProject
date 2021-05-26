@@ -62,4 +62,10 @@ class AddressServiceTest {
         boolean result = addressBookService.checkEmployeePayrollInSyncWithDB("Sandip");
         Assertions.assertTrue(result);
     }
+    @Test
+    public void givenDateRangeForRecord_WhenRetrieved_ShouldReturnProperData() throws AddressBookException {
+        AddressBookService addressBookService = new AddressBookService();
+        List<AddressBook> recordDataInGivenDateRange = addressBookService.getRecordAddedInDateRange("2020-01-01","2015-05-20");
+        Assertions.assertEquals(3,recordDataInGivenDateRange.size());
+    }
 }

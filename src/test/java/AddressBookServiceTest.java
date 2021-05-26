@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-public class AddressServiceTest {
+class AddressServiceTest {
     @Test
     public void given3ContactDetailsWhenWrittenToFile() {
         AddressBook[] arrayOfEmps = {

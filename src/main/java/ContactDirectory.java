@@ -6,36 +6,37 @@ public class ContactDirectory{
     long phoneNo;
     Scanner scanner = new Scanner(System.in);
     ArrayList <AddressBook> contacts = new ArrayList <AddressBook>();
-
-
     public void addContact() {
+        System.out.println("No. of contacts in the contacts you want to add");
+        int n = scanner.nextInt();
+        for(int i = 0; i<n;i++) {
+            System.out.println("Enter the first name:");
+            String firstName = scanner.next();
 
-        System.out.println("Enter the first name:");
-        String firstName = scanner.nextLine();
+            System.out.println("Enter the last name :");
+            String lastName = scanner.next();
 
-        System.out.println("Enter the last name :");
-        String lastName = scanner.nextLine();
+            System.out.println("Enter the address :");
+            String address = scanner.next();
 
-        System.out.println("Enter the address :");
-        String address = scanner.nextLine();
+            System.out.println("Enter the city :");
+            String city = scanner.next();
 
-        System.out.println("Enter the city :");
-        String city = scanner.nextLine();
+            System.out.println("Enter the state :");
+            String state = scanner.next();
 
-        System.out.println("Enter the state :");
-        String state = scanner.nextLine();
+            System.out.println("Enter the email :");
+            String email = scanner.next();
 
-        System.out.println("Enter the email :");
-        String email = scanner.nextLine();
+            System.out.println("Enter the mobile number :");
+            long phoneNo = scanner.nextLong();
 
-        System.out.println("Enter the mobile number :");
-        long phoneNo = scanner.nextLong();
+            System.out.println("Enter the zip :");
+            int zip = scanner.nextInt();
 
-        System.out.println("Enter the zip :");
-        int zip = scanner.nextInt();
-
-        contacts.add(new AddressBook(firstName, lastName, address, city,
-                state, phoneNo, email, zip));
+            contacts.add(new AddressBook(firstName, lastName, address, city,
+                    state, phoneNo, email, zip));
+        }
     }
     public void editContact() {
 

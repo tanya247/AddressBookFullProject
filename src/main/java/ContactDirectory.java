@@ -6,6 +6,7 @@ public class ContactDirectory{
     long phoneNo;
     Scanner scanner = new Scanner(System.in);
     ArrayList <AddressBook> contacts = new ArrayList <AddressBook>();
+
     public void addContact() {
         System.out.println("No. of contacts in the contacts you want to add");
         int n = scanner.nextInt();
@@ -15,27 +16,34 @@ public class ContactDirectory{
 
             System.out.println("Enter the last name :");
             String lastName = scanner.next();
+            if (contacts.stream().anyMatch(
+                    person -> person.getFirstName().equals(firstName) && person.getLastName().equals(lastName))) {
+                System.out.println(firstName + " "+lastName + " is already exixts !");
 
-            System.out.println("Enter the address :");
-            String address = scanner.next();
+            }
+            else {
+                System.out.println("Enter the address :");
+                String address = scanner.next();
 
-            System.out.println("Enter the city :");
-            String city = scanner.next();
+                System.out.println("Enter the city :");
+                String city = scanner.next();
 
-            System.out.println("Enter the state :");
-            String state = scanner.next();
+                System.out.println("Enter the state :");
+                String state = scanner.next();
 
-            System.out.println("Enter the email :");
-            String email = scanner.next();
+                System.out.println("Enter the email :");
+                String email = scanner.next();
 
-            System.out.println("Enter the mobile number :");
-            long phoneNo = scanner.nextLong();
+                System.out.println("Enter the mobile number :");
+                long phoneNo = scanner.nextLong();
 
-            System.out.println("Enter the zip :");
-            int zip = scanner.nextInt();
+                System.out.println("Enter the zip :");
+                int zip = scanner.nextInt();
 
-            contacts.add(new AddressBook(firstName, lastName, address, city,
-                    state, phoneNo, email, zip));
+                contacts.add(new AddressBook(firstName, lastName, address, city,
+                        state, phoneNo, email, zip));
+                System.out.println("Contact added");
+            }
         }
     }
     public void editContact() {

@@ -68,4 +68,11 @@ class AddressServiceTest {
         List<AddressBook> recordDataInGivenDateRange = addressBookService.getRecordAddedInDateRange("2020-01-01","2015-05-20");
         Assertions.assertEquals(3,recordDataInGivenDateRange.size());
     }
+    @Test
+    public void givenNameofCityOrState_WhenRetrieved_ShouldReturnProperData() throws AddressBookException {
+        AddressBookService addressBookService = new AddressBookService();
+        List<AddressBook> addressBooks = addressBookService.getRecordsAddedByCityOrStateName("Ghaziabad","UP");
+        System.out.println(addressBooks);
+        Assertions.assertEquals(5,addressBooks.size());
+    }
 }

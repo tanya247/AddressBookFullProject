@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AddressServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-05-26T15:49:04" hostname="LAPTOP-Q9T3UUC8" time="0.993">
+<testsuite name="AddressServiceTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-05-26T15:57:26" hostname="LAPTOP-Q9T3UUC8" time="0.47">
   <properties/>
-  <testcase name="givenDateRangeForRecord_WhenRetrieved_ShouldReturnProperData()" classname="AddressServiceTest" time="0.993">
+  <testcase name="givenNameofCityOrState_WhenRetrieved_ShouldReturnProperData()" classname="AddressServiceTest" time="0.47">
     <failure message="AddressBookException" type="AddressBookException">AddressBookException
-	at AddressBookConnection.getDataFromDataBase(AddressBookConnection.java:41)
-	at AddressBookConnection.getRecordsAddedInGivenDateRange(AddressBookConnection.java:108)
-	at AddressBookService.getRecordAddedInDateRange(AddressBookService.java:40)
-	at AddressServiceTest.givenDateRangeForRecord_WhenRetrieved_ShouldReturnProperData(AddressBookServiceTest.java:68)
+	at AddressBookConnection.getAddressBookData(AddressBookConnection.java:63)
+	at AddressBookConnection.getDataFromDataBase(AddressBookConnection.java:38)
+	at AddressBookConnection.readData(AddressBookConnection.java:29)
+	at AddressBookConnection.getRecordsByCityOrState(AddressBookConnection.java:111)
+	at AddressBookService.getRecordsAddedByCityOrStateName(AddressBookService.java:44)
+	at AddressServiceTest.givenNameofCityOrState_WhenRetrieved_ShouldReturnProperData(AddressBookServiceTest.java:74)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -100,14 +102,19 @@
 </failure>
   </testcase>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[java.sql.SQLSyntaxErrorException: Unknown column 'startDate' in 'where clause'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.StatementImpl.executeQuery(StatementImpl.java:1198)
-	at AddressBookConnection.getDataFromDataBase(AddressBookConnection.java:37)
-	at AddressBookConnection.getRecordsAddedInGivenDateRange(AddressBookConnection.java:108)
-	at AddressBookService.getRecordAddedInDateRange(AddressBookService.java:40)
-	at AddressServiceTest.givenDateRangeForRecord_WhenRetrieved_ShouldReturnProperData(AddressBookServiceTest.java:68)
+  <system-err><![CDATA[java.sql.SQLException: Column 'startDate' not found.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.findColumn(ResultSetImpl.java:581)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getDate(ResultSetImpl.java:790)
+	at AddressBookConnection.getAddressBookData(AddressBookConnection.java:58)
+	at AddressBookConnection.getDataFromDataBase(AddressBookConnection.java:38)
+	at AddressBookConnection.readData(AddressBookConnection.java:29)
+	at AddressBookConnection.getRecordsByCityOrState(AddressBookConnection.java:111)
+	at AddressBookService.getRecordsAddedByCityOrStateName(AddressBookService.java:44)
+	at AddressServiceTest.givenNameofCityOrState_WhenRetrieved_ShouldReturnProperData(AddressBookServiceTest.java:74)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

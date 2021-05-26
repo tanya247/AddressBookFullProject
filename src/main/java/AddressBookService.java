@@ -40,6 +40,11 @@ public class AddressBookService {
         List<AddressBook> addressBooks = addressBookConnection.getRecordsAddedInGivenDateRange(date1, date2);
         return addressBooks;
     }
+    public List<AddressBook> getRecordsAddedByCityOrStateName(String city, String state) throws AddressBookException {
+        List<AddressBook> addressBooks = addressBookConnection.getRecordsByCityOrState(city, state);
+        return addressBooks;
+    }
+
 
 
 }

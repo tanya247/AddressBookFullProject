@@ -106,6 +106,11 @@ public class AddressBookConnection {
     public List<AddressBook> getRecordsAddedInGivenDateRange(String date1, String date2) throws AddressBookException {
         String query = String.format("SELECT * FROM addressbook WHERE startDate BETWEEN '%s' AND '%s';", date1, date2);
         return this.getDataFromDataBase(query);
-
     }
+    public List<AddressBook> getRecordsByCityOrState(String city, String state) throws AddressBookException {
+        List<AddressBook> addressBooks = this.readData();
+        String query = String.format("SELECT * FROM addressbook WHERE City='%s' OR State='%s';", city, state);
+        return this.getDataFromDataBase(query);
+    }
+
 }

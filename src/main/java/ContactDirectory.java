@@ -183,7 +183,7 @@ public class ContactDirectory{
     }
     public void sortNameAlphabetically() {
         ArrayList<AddressBook> contacts = this.getContact();
-        List<AddressBook> sortedList = contacts.stream().sorted(Comparator.comparing(AddressBook::getName)).collect(Collectors.toList());
+        List<AddressBook> sortedList = contacts.stream().sorted(Comparator.comparing(AddressBook::getFirstName)).collect(Collectors.toList());
 
         for(AddressBook contact:sortedList){
             System.out.println("Name: "+contact.getName());

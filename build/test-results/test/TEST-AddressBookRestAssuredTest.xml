@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AddressBookRestAssuredTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-05-31T13:00:13" hostname="LAPTOP-Q9T3UUC8" time="5.84">
+<testsuite name="AddressBookRestAssuredTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-05-31T17:50:25" hostname="LAPTOP-Q9T3UUC8" time="5.836">
   <properties/>
-  <testcase name="givenContactDataInJsonServer_WhenRetrieved_ShouldMatchContactCount()" classname="AddressBookRestAssuredTest" time="5.84">
+  <testcase name="givenMultipleContact_WhenAdded_ShouldMatch201ResponseAndCount()" classname="AddressBookRestAssuredTest" time="5.836">
     <failure message="java.net.ConnectException: Connection refused: connect" type="java.net.ConnectException">java.net.ConnectException: Connection refused: connect
 	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
 	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
@@ -109,8 +109,8 @@
 	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:171)
 	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
 	at io.restassured.RestAssured.get(RestAssured.java:720)
-	at AddressBookRestAssuredTest.getAddressBook(AddressBookRestAssuredTest.java:18)
-	at AddressBookRestAssuredTest.givenContactDataInJsonServer_WhenRetrieved_ShouldMatchContactCount(AddressBookRestAssuredTest.java:27)
+	at AddressBookRestAssuredTest.getAddressBook(AddressBookRestAssuredTest.java:19)
+	at AddressBookRestAssuredTest.givenMultipleContact_WhenAdded_ShouldMatch201ResponseAndCount(AddressBookRestAssuredTest.java:43)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

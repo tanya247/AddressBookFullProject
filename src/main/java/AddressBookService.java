@@ -69,6 +69,10 @@ public class AddressBookService {
     public long sizeOfContactList() {
         return this.addressBookList.size();
     }
+    public void addContactToAddressBook(AddressBook addressBookData) {
+        addressBookList.add(addressBookData);
+    }
+
 
 }
 

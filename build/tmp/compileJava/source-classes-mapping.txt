@@ -3,8 +3,8 @@ AddressBookException.java
  AddressBookException$AddressBookExceptionType
 AddressBookCSVFile.java
  AddressBookCSVFile
-AddressBookService.java
- AddressBookService
+AddressBookMain.java
+ AddressBookMain
 AddressBook.java
  AddressBook
 AddJsonFile.java
@@ -17,5 +17,5 @@ AddressBookIOService.java
  AddressBookIOService
 MultipleAddressBook.java
  MultipleAddressBook
-AddressBookMain.java
- AddressBookMain
+AddressBookService.java
+ AddressBookService

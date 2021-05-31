@@ -1,4 +1,4 @@
 AddressBookRestAssuredTest.java
  AddressBookRestAssuredTest
 AddressBookServiceTest.java
- AddressServiceTest
+ AddressBookServiceTest

@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-class AddressServiceTest {
+public class AddressBookServiceTest {
     AddressBookService addressBookService = new AddressBookService();
     List<AddressBook> addressBookList;
 

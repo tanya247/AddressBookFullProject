@@ -85,6 +85,10 @@ public class AddressBookService {
             addressBookData.setCity(city);
 
     }
+    public void deleteContactPayroll(String firstName) {
+        AddressBook addressBookData = this.getAddressBookContent(firstName);
+        addressBookList.remove(addressBookData);
+    }
 
 
 }

@@ -57,7 +57,23 @@ public class AddressBookRestAssuredTest {
             addressBookService.addContactToAddressBook(addressBookData);
         }
         long entries = addressBookService.sizeOfContactList();
-        Assertions.assertEquals(3, entries);
+        Assertions.assertEquals(5, entries);
+    }
+    @Test
+    public void givenCity_WhenUpdated_ShouldMatch200response() {
+        AddressBook[] arrayOfAddressBook = getAddressBook();
+        AddressBookService addressBookService;
+        addressBookService = new AddressBookService(Arrays.asList(arrayOfAddressBook));
+        addressBookService.updateContactCity("Tanya","Ghaziabad");
+        AddressBook addressBookData = addressBookService.getAddressBookContent("Prashant");
+
+        String addJson = new Gson().toJson(addressBookData);
+        RequestSpecification request = RestAssured.given();
+        request.header("Content-Type", "application/json");
+        request.body(addJson);
+        Response response = request.put("/Addressbook/" + addressBookData.getName());
+        int statusCode = response.getStatusCode();
+        Assertions.assertEquals(200, statusCode);
     }
 
 }

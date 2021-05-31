@@ -72,6 +72,19 @@ public class AddressBookService {
     public void addContactToAddressBook(AddressBook addressBookData) {
         addressBookList.add(addressBookData);
     }
+    public AddressBook getAddressBookContent(String firstName) {
+        AddressBook addressBookData;
+        addressBookData = this.addressBookList.stream().filter(dataItem -> dataItem.getFirstName().equals(firstName))
+                .findFirst().orElse(null);
+        return addressBookData;
+    }
+
+    public void updateContactCity(String firstName, String city) {
+        AddressBook addressBookData = this.getAddressBookContent(firstName);
+        if (addressBookData != null)
+            addressBookData.setCity(city);
+
+    }
 
 
 }

@@ -10,12 +10,18 @@ repositories {
 }
 
 dependencies {
+    implementation 'junit:junit:4.13.1'
+    implementation 'junit:junit:4.13.1'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
     implementation group: 'com.opencsv', name: 'opencsv', version: '4.0'
     compile "com.opencsv:opencsv:4.0"
     implementation group: 'com.google.code.gson', name: 'gson', version: '2.3.1'
     compile group: 'mysql', name: 'mysql-connector-java',version: '8.0.25'
+    implementation group: 'org.json', name: 'json', version: '20210307'
+
+
+    testCompile group: 'io.rest-assured', name: 'rest-assured', version: '4.3.1'
 }
 
 test {

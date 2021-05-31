@@ -1,10 +1,22 @@
 
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class AddressBookService {
-
-    List<AddressBook> addressBookList;
+    
+    public List<AddressBook> addressBookList;
     private static AddressBookConnection addressBookConnection;
+
+    public AddressBookService(List<AddressBook> addressBookList) {
+        this();
+        this.addressBookList = addressBookList;
+    }
+
+
+    public void setContactDataList(List<AddressBook> addressBookList) {
+        this.addressBookList = new ArrayList<>(addressBookList);
+    }
 
     public AddressBookService() {
         addressBookConnection = AddressBookConnection.getInstance();
@@ -53,5 +65,10 @@ public class AddressBookService {
     public void addMultipleContactsToRecord(List<AddressBook> addressBooks) throws AddressBookException {
         addressBookConnection.addMultipleContactsToDBUsingThread(addressBooks);
     }
+
+    public long sizeOfContactList() {
+        return this.addressBookList.size();
+    }
+
 }
 
